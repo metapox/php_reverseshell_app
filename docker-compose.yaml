@@ -1,0 +1,14 @@
+version: "3.9"
+services:
+  metasploit:
+    image: metasploitframework/metasploit-framework
+    ports:
+      - 4440-4450
+    tty: true
+    stdin_open: true
+  app:
+    build: .
+    ports:
+      - 80:80
+    tty: true
+
